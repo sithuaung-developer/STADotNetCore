@@ -41,6 +41,9 @@ foreach (DataRow dr in dt.Rows)
 
 AdoDotNetExample adoDotNetExample = new AdoDotNetExample();
 //adoDotNetExample.Read();
-adoDotNetExample.Create("title", "author", "content");
+/*adoDotNetExample.Create("title", "author", "content");*/
+/*adoDotNetExample.Update(12, "C#", "SiThu", "C#AdoDotNet");*/
+//adoDotNetExample.Delete(11);
+adoDotNetExample.Edit(12);
 
 Console.ReadKey();
