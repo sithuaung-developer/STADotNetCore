@@ -46,7 +46,7 @@ namespace STADotNetCore.ConsoleApp
            
                 Console.WriteLine("Blog Id => " + dr["BlogId"]);
                 Console.WriteLine("Blog Title => " + dr["BlogTitle"]);
-                Console.WriteLine("Blog Title => " + dr["BlogAuthor"]);
+                Console.WriteLine("Blog Author => " + dr["BlogAuthor"]);
                 Console.WriteLine("Blog Content => " + dr["BlogContent"]);
                 Console.WriteLine("------------------------");
             
@@ -72,7 +72,7 @@ namespace STADotNetCore.ConsoleApp
             {
                 Console.WriteLine("Blog Id => " + dr["BlogId"]);
                 Console.WriteLine("Blog Title => " + dr["BlogTitle"]);
-                Console.WriteLine("Blog Title => " + dr["BlogAuthor"]);
+                Console.WriteLine("Blog Author => " + dr["BlogAuthor"]);
                 Console.WriteLine("Blog Content => " + dr["BlogContent"]);
                 Console.WriteLine("------------------------");
             }
