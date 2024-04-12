@@ -1,10 +1,11 @@
-﻿using System.Data;
+﻿using STADotNetCore.ConsoleApp;
+using System.Data;
 using System.Data.SqlClient;
 
 Console.WriteLine("Hello, World!");
 //nuget
 //sqlConnection
-
+/*
 SqlConnectionStringBuilder stringBuilder = new SqlConnectionStringBuilder(); // call ado.net
 stringBuilder.DataSource = "."; //serverName
 stringBuilder.InitialCatalog = "DotNetTrainingBatch4"; //DataBase Name
@@ -36,6 +37,10 @@ foreach (DataRow dr in dt.Rows)
     Console.WriteLine("Blog Title => " + dr["BlogTitle"]);
     Console.WriteLine("Blog Content => " + dr["BlogContent"]);
     Console.WriteLine("------------------------");
-}
+}*/
+
+AdoDotNetExample adoDotNetExample = new AdoDotNetExample();
+//adoDotNetExample.Read();
+adoDotNetExample.Create("title", "author", "content");
 
 Console.ReadKey();
