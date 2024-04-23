@@ -2,7 +2,7 @@
 using System.Data;
 using System.Data.SqlClient;
 
-Console.WriteLine("Hello, World!");
+//Console.WriteLine("Hello, World!");
 //nuget
 //sqlConnection
 /*
@@ -39,11 +39,13 @@ foreach (DataRow dr in dt.Rows)
     Console.WriteLine("------------------------");
 }*/
 
-AdoDotNetExample adoDotNetExample = new AdoDotNetExample();
+//AdoDotNetExample adoDotNetExample = new AdoDotNetExample();
 //adoDotNetExample.Read();
 /*adoDotNetExample.Create("title", "author", "content");*/
 /*adoDotNetExample.Update(12, "C#", "SiThu", "C#AdoDotNet");*/
 //adoDotNetExample.Delete(11);
-adoDotNetExample.Edit(12);
+//adoDotNetExample.Edit(12);
 
+DapperExample dapperExample = new DapperExample();
+dapperExample.Run();
 Console.ReadKey();
