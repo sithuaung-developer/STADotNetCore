@@ -18,7 +18,7 @@ namespace STADotNetCore.ConsoleApp
             // Edit(21);
             //Create("Js", "Nyein", "Js is awesome");
             //Update(9, "Php", "Aye", "Php use in web");
-            Delete(24);
+            //Delete(24);
             Delete(12);
         }
         private void Read()
