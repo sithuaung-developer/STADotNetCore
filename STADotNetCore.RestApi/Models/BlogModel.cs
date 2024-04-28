@@ -6,10 +6,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace STADotNetCore.ConsoleApp.Dtos
+namespace STADotNetCore.RestApi.Model
 {
     [Table("Tbl_Blog")] // mapping class and Table (BlogDto mapping Tbl_Blog)
-    public class BlogDto
+    public class BlogModel
     {
         [Key] //primay key declare
         public int BlogId { get; set; }

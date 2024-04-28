@@ -11,6 +11,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documents", "Documents", "{
 		script.sql = script.sql
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "STADotNetCore.RestApi", "STADotNetCore.RestApi\STADotNetCore.RestApi.csproj", "{CD9F322C-F0D9-4FD0-9755-7074785AB197}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{1742AA63-E356-4A1E-BDC5-B9681B46363A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1742AA63-E356-4A1E-BDC5-B9681B46363A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1742AA63-E356-4A1E-BDC5-B9681B46363A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD9F322C-F0D9-4FD0-9755-7074785AB197}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD9F322C-F0D9-4FD0-9755-7074785AB197}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD9F322C-F0D9-4FD0-9755-7074785AB197}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD9F322C-F0D9-4FD0-9755-7074785AB197}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
