@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace STADotNetCore.ConsoleApp
+namespace STADotNetCore.ConsoleApp.services
 {
     internal class ConnectionStrings
     {
@@ -14,7 +14,8 @@ namespace STADotNetCore.ConsoleApp
             DataSource = ".",
             InitialCatalog = "DotNetTrainingBatch4",
             UserID = "sa",
-            Password = "sa@123"
+            Password = "sa@123",
+            TrustServerCertificate = true, //Need for efcore
         };
     }
 }

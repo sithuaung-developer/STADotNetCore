@@ -1,4 +1,6 @@
 ﻿using Dapper;
+using STADotNetCore.ConsoleApp.Dtos;
+using STADotNetCore.ConsoleApp.services;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -7,7 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace STADotNetCore.ConsoleApp
+namespace STADotNetCore.ConsoleApp.DapperExamples
 {
     internal class DapperExample
     {
@@ -16,10 +18,10 @@ namespace STADotNetCore.ConsoleApp
             //Read();
             // Edit(2);
             // Edit(21);
-            //Create("Js", "Nyein", "Js is awesome");
+            Create("Js", "Nyein", "Js is awesome");
             //Update(9, "Php", "Aye", "Php use in web");
             //Delete(24);
-            Delete(12);
+            // Delete(13);
         }
         private void Read()
         {
@@ -33,14 +35,14 @@ namespace STADotNetCore.ConsoleApp
                 Console.WriteLine(item.BlogAuthor);
                 Console.WriteLine(item.BlogContent);
                 Console.WriteLine("-----------------");
-                
+
             }
         }
 
         private void Edit(int id)
         {
-           using IDbConnection db = new SqlConnection(ConnectionStrings.SqlConnectionStringBuilder.ConnectionString);
-           var item = db.Query<BlogDto>("Select * from tbl_blog where blogId = @BlogId", new BlogDto { BlogId = id}).FirstOrDefault();//Change 
+            using IDbConnection db = new SqlConnection(ConnectionStrings.SqlConnectionStringBuilder.ConnectionString);
+            var item = db.Query<BlogDto>("Select * from tbl_blog where blogId = @BlogId", new BlogDto { BlogId = id }).FirstOrDefault();//Change 
 
             if (item is null)
             {
@@ -62,7 +64,7 @@ namespace STADotNetCore.ConsoleApp
                 BlogAuthor = author,
                 BlogContent = content
             };
-            
+
             string query = @"INSERT INTO [dbo].[Tbl_Blog]
            ([BlogTitle]
            ,[BlogAuthor]
@@ -79,7 +81,7 @@ namespace STADotNetCore.ConsoleApp
             Console.WriteLine(message);
         }
 
-        private void Update(int id, string title, string author , string content)
+        private void Update(int id, string title, string author, string content)
         {
             var item = new BlogDto
             {
@@ -102,18 +104,18 @@ namespace STADotNetCore.ConsoleApp
             Console.WriteLine(message);
         }
 
-        private void Delete(int id )
+        private void Delete(int id)
         {
             var item = new BlogDto
-            { 
-                BlogId = id 
+            {
+                BlogId = id
             };
 
             string qurey = "delete from Tbl_Blog where BlogId = @BlogId";
-    
+
 
             using IDbConnection db = new SqlConnection(ConnectionStrings.SqlConnectionStringBuilder.ConnectionString);
-            int resule = db.Execute(qurey,item);
+            int resule = db.Execute(qurey, item);
 
             string message = resule > 0 ? "Delete Successful." : "Delete Failed";
             Console.WriteLine(message);

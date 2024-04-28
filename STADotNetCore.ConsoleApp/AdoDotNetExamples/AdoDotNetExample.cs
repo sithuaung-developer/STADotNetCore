@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Reflection.Metadata;
 
-namespace STADotNetCore.ConsoleApp
+namespace STADotNetCore.ConsoleApp.AdoDotNetExamples
 {
     internal class AdoDotNetExample
     {
@@ -36,20 +36,20 @@ namespace STADotNetCore.ConsoleApp
             connection.Close();
             Console.WriteLine("Connection Close.");
 
-            if(dt.Rows.Count == 0)
+            if (dt.Rows.Count == 0)
             {
                 Console.WriteLine("No Data Found.");
                 return;
             }
 
             DataRow dr = dt.Rows[0]; //edit change don't need foreach 
-           
-                Console.WriteLine("Blog Id => " + dr["BlogId"]);
-                Console.WriteLine("Blog Title => " + dr["BlogTitle"]);
-                Console.WriteLine("Blog Author => " + dr["BlogAuthor"]);
-                Console.WriteLine("Blog Content => " + dr["BlogContent"]);
-                Console.WriteLine("------------------------");
-            
+
+            Console.WriteLine("Blog Id => " + dr["BlogId"]);
+            Console.WriteLine("Blog Title => " + dr["BlogTitle"]);
+            Console.WriteLine("Blog Author => " + dr["BlogAuthor"]);
+            Console.WriteLine("Blog Content => " + dr["BlogContent"]);
+            Console.WriteLine("------------------------");
+
 
         }
 
