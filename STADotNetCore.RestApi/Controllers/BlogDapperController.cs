@@ -10,7 +10,7 @@ namespace STADotNetCore.RestApi.Controllers
     //BlogDapper => endpoint
     [Route("api/[controller]")]
     [ApiController]
-    public class BlogDapper : ControllerBase
+    public class BlogDapperController : ControllerBase
     {
         [HttpGet]
         public IActionResult GetBlogs()
@@ -56,7 +56,7 @@ namespace STADotNetCore.RestApi.Controllers
 
             string message = result > 0 ? "Saving Successful." : "Saving Failed";
             return Ok(message);
-            return Ok(message);
+         
         }
 
         [HttpPut("{id}")]
@@ -148,6 +148,7 @@ namespace STADotNetCore.RestApi.Controllers
         private BlogModel? FindById(int id)
         {
             string query = "Select * from tbl_blog where blogId = @BlogId";
+
             using IDbConnection db = new SqlConnection(ConnectionStrings.SqlConnectionStringBuilder.ConnectionString);
             var item = db.Query<BlogModel>(query, new BlogModel { BlogId = id }).FirstOrDefault();
             return item;       

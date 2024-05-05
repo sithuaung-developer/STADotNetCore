@@ -11,9 +11,9 @@ namespace STADotNetCore.RestApi.Controllers
     //BlogDapper => endpoint
     [Route("api/[controller]")]
     [ApiController]
-    public class BlogDapperController1 : ControllerBase
+    public class BlogDapper2Controller : ControllerBase
     {
-        private readonly DapperService _dapperService = new DapperService(ConnectionStrings.SqlConnectionStringBuilder.ConnectionString)
+        private readonly DapperService _dapperService = new DapperService(ConnectionStrings.SqlConnectionStringBuilder.ConnectionString);
         [HttpGet]
         public IActionResult GetBlogs()
         {
