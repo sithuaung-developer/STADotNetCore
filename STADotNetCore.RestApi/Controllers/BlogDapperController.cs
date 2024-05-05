@@ -56,6 +56,7 @@ namespace STADotNetCore.RestApi.Controllers
 
             string message = result > 0 ? "Saving Successful." : "Saving Failed";
             return Ok(message);
+            return Ok(message);
         }
 
         [HttpPut("{id}")]
